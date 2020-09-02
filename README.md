@@ -198,7 +198,7 @@ It works on scaling factors too, but prune negligible channels considering the d
 
 [**Channel Pruning via Optimal Thresholding**](https://arxiv.org/pdf/2003.04566.pdf)
 
-Due to the company's policy, The author will release his implementation sometime later. Since OT is extremely simple, you may also follow the paper to implement based on this repo or any other network slimming code with a little effort. 
+Due to the company's policy, The author will release his implementation sometime later. If you are interested you may also follow the paper to implement based on this repo or any other network slimming code. It should only take a little effort since OT is extremely simple. 
 
 ## Acknowledgement
 
