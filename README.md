@@ -8,15 +8,13 @@ This repo implements the following paper in [PyTorch](https://pytorch.org):
 
 [**Learning Efficient Convolutional Networks Through Network Slimming**](http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_Learning_Efficient_Convolutional_ICCV_2017_paper.pdf)
 
-This repo is a very good candidate to implement the following paper (a surprisingly simple method) with a few lines of code in *netslim/prune.py*
-
 **Optimal Thresholding**. Inspired by Network Slimming, we proposed an extremely simple yet effective method, termed Optimal Thresholding, to avoid the over- and under-pruning. 
 
 It works on scaling factors too, but prune negligible channels considering the distribution of scaling factors rather than the magnitudes across the whole network. Compared to Network Slimming, it shows advantages particularly for models with very high pruned percentage. Details can be found in the tech report:
 
 [**Channel Pruning via Optimal Thresholding**](https://arxiv.org/pdf/2003.04566.pdf)
 
-The author will release his implementation some time later, due to the company's policy ...
+Due to the company's policy, The author will release his implementation sometime later. Since OT is extremely simple, you may also follow the paper to implement based on this repo or any other network slimming code with a little effort. 
 
 ## No Dirty Work
 
@@ -53,6 +51,10 @@ This code depends on traced graph by [TorchScript](https://pytorch.org/docs/stab
        # ...
    ```
 ### shortcut from BN to BN
+
+...
+
+### Does not support PyTorch >= 1.5
 
 ...
 
