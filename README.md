@@ -1,20 +1,10 @@
-# Channel Pruning: Network Slimming & Optimal Thresholding
-
-![under-over-pruning](https://raw.githubusercontent.com/yeyun11/netslim/nonsense/fig-01.jpg)
+# Channel Pruning: Network Slimming
 
 This repo implements the following paper in [PyTorch](https://pytorch.org):  
 
 **Network Slimming**. By training networks with L1 penalty, and then prune channels with smaller scaling factors of BN. Details are described in:
 
 [**Learning Efficient Convolutional Networks Through Network Slimming**](http://openaccess.thecvf.com/content_ICCV_2017/papers/Liu_Learning_Efficient_Convolutional_ICCV_2017_paper.pdf)
-
-**Optimal Thresholding**. Inspired by Network Slimming, we proposed an extremely simple yet effective method, termed Optimal Thresholding, to avoid the over- and under-pruning. 
-
-It works on scaling factors too, but prune negligible channels considering the distribution of scaling factors rather than the magnitudes across the whole network. Compared to Network Slimming, it shows advantages particularly for models with very high pruned percentage. Details can be found in the tech report:
-
-[**Channel Pruning via Optimal Thresholding**](https://arxiv.org/pdf/2003.04566.pdf)
-
-Due to the company's policy, The author will release his implementation sometime later. Since OT is extremely simple, you may also follow the paper to implement based on this repo or any other network slimming code with a little effort. 
 
 ## No Dirty Work
 
@@ -200,6 +190,15 @@ The efficiency of pruned model can be further improved by using OpenVINO, if you
 
 
 More details about OpenVINO model optimizer can be found at [Converting a ONNX* Model](https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_ONNX.html)
+
+## Optimal Thresholding
+Inspired by Network Slimming, we further proposed an extremely simple yet effective method, termed Optimal Thresholding, to avoid the over- and under-pruning. 
+
+It works on scaling factors too, but prune negligible channels considering the distribution of scaling factors rather than the magnitudes across the whole network. Compared to Network Slimming, it shows advantages particularly for models with very high pruned percentage. Details can be found in the tech report:
+
+[**Channel Pruning via Optimal Thresholding**](https://arxiv.org/pdf/2003.04566.pdf)
+
+Due to the company's policy, The author will release his implementation sometime later. Since OT is extremely simple, you may also follow the paper to implement based on this repo or any other network slimming code with a little effort. 
 
 ## Acknowledgement
 
