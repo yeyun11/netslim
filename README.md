@@ -99,7 +99,7 @@ thop >= 0.0.31
    ```python
    from netslim import prune, network_slimming # you may import other available methods
    # For example, input_shape for CIFAR is (3, 32, 32)
-   pruned_model = prune(model, input_shape) # by default, use optimal thresholding
+   pruned_model = prune(model, input_shape) # by default, use network slimming
    
    # The following code is an example using network slimming with a prune ratio of 0.4
    #pruned_model = prune(model, input_shape, prune_method=network_slimming, prune_ratio=0.4)
