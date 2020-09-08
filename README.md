@@ -1,4 +1,4 @@
-# Channel Pruning: Network Slimming
+# Network Slimming with PyTorch
 
 This repo implements the following paper in [PyTorch](https://pytorch.org):  
 
