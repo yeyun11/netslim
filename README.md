@@ -188,17 +188,7 @@ The efficiency of pruned model can be further improved by using OpenVINO, if you
    python /path/to/intel/openvino/deployment_tools/model_optimizer/mo_onnx.py --input_model /path/to/pruned_model.onnx --input_shape [input shape] --data_type [FP16|FP32|INT8] --model_name [model name]
    ```
 
-
 More details about OpenVINO model optimizer can be found at [Converting a ONNX* Model](https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_ONNX.html)
-
-## Optimal Thresholding
-Inspired by Network Slimming, we further proposed an extremely simple yet effective method, termed Optimal Thresholding, to avoid the over- and under-pruning. 
-
-It works on scaling factors too, but prune negligible channels considering the distribution of scaling factors rather than the magnitudes across the whole network. Compared to Network Slimming, it shows advantages particularly for models with very high pruned percentage. Details can be found in the tech report:
-
-[**Channel Pruning via Optimal Thresholding**](https://arxiv.org/pdf/2003.04566.pdf)
-
-Due to the company's policy, The author will release his implementation sometime later. If you are interested you may also follow the paper to implement based on this repo or any other network slimming code. It should only take a little effort since OT is extremely simple. 
 
 ## Acknowledgement
 
