@@ -3,7 +3,6 @@ from functools import partial
 import torch
 import torch.nn as nn
 from .graph_parser import get_pruning_layers
-from .thresholding import css_thresholding, MIN_SCALING_FACTOR, OT_DISCARD_PERCENT
 
 OUT_CHANNEL_DIM = 0
 IN_CHANNEL_DIM = 1
